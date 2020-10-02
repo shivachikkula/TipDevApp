@@ -1,0 +1,32 @@
+﻿@model System.Data.DataTable
+
+@using System.Data;
+
+@{
+    ViewBag.Title = "Home Page";
+}
+<div class="row">
+    <br /><br />
+</div>
+<div class="row">
+    <div class="col-sm-3">Student Id</div>
+    <div class="col-sm-3">First Name</div>
+    <div class="col-sm-3">Last Name </div>
+    <div class="col-sm-3">Date Of Birth</div>
+    <div class="col-sm-3">Address</div>
+</div>
+
+
+
+
+@foreach (DataRow dr in Model.Rows)
+{
+<div class="row">
+    <div class="col-sm-3">@dr[0].ToString() </div>
+    <div class="col-sm-3">@dr[1].ToString() </div>
+    <div class="col-sm-3">@dr[2].ToString() </div>
+    <div class="col-sm-3">@dr[3].ToString() </div>
+    <div class="col-sm-3">@dr[4].ToString() </div>
+</div>
+}
+    
